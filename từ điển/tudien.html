@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhap"/>
+    <button type="button" onclick="dich()">dịch</button>
+    <div id="show"></div>
+</form>
+<script>
+    alert("hiện tại từ điển chỉ có 3 từ khóa 'hello''hi' và 'goodbye'");
+    function dich() {
+        let word = document.getElementById("nhap").value;
+        var arr = ['hello','hi','goodbye'];
+        var arr1 = ['xin chào','tạm biệt'];
+        if (word === arr[0] || word === arr[1]) {
+            document.getElementById('show').innerHTML = arr1[0];
+        } else if (word === arr[2]) {
+            document.getElementById('show').innerHTML = arr1[1];
+        } else {
+            document.getElementById('show').innerHTML = '';
+            alert('từ khóa có thể chưa được cập nhập hoặc không tồn tại');
+        }
+    };
+</script>
+</body>
+</html>
